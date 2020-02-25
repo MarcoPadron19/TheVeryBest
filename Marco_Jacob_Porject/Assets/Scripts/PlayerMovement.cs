@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
+    public GameObject player;
 
     public float speed = 12f;
     public float gravity = -9.81f;
@@ -42,5 +43,16 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Detected collision between " + gameObject.name + " and " + other.name);
+        if(other.gameObject == player)
+        {
+            Debug.Log("Player fell to their death.");
+        }
+
+        player.GetComponent<Health>().Respawn();
     }
 }

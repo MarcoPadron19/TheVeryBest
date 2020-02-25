@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class Health : MonoBehaviour {
-	
-	
+public class Health : MonoBehaviour
+{
+
 	private Vector3 respawnPosition;
 	private Quaternion respawnRotation;
 	
@@ -11,8 +12,9 @@ public class Health : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		// store initial position as respawn location
-		respawnPosition = transform.position;
+       Debug.Log("Starting Position and Rotation " + respawnPosition + " and " + respawnRotation);
+        // store initial position as respawn location
+        respawnPosition = transform.position;
 		respawnRotation = transform.rotation;
 
 		
@@ -28,6 +30,7 @@ public class Health : MonoBehaviour {
 
     public void Respawn()
     {
+        Debug.Log("Respawn Position and Rotation " + respawnPosition + " and " + respawnRotation);
         gameObject.transform.position = respawnPosition;
         gameObject.transform.rotation = respawnRotation;
     }
