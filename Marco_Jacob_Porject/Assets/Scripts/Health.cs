@@ -16,9 +16,10 @@ public class Health : MonoBehaviour
         // store initial position as respawn location
         respawnPosition = transform.position;
 		respawnRotation = transform.rotation;
+        Debug.Log("Starting Position and Rotation " + respawnPosition + " and " + respawnRotation);
 
-		
-	}
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,8 +32,29 @@ public class Health : MonoBehaviour
     public void Respawn()
     {
         Debug.Log("Respawn Position and Rotation " + respawnPosition + " and " + respawnRotation);
-        gameObject.transform.position = respawnPosition;
-        gameObject.transform.rotation = respawnRotation;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
+        //transform.rotation = respawnRotation;
     }
          
 }
