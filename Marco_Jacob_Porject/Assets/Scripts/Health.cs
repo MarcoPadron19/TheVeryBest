@@ -16,7 +16,7 @@ public class Health : MonoBehaviour
         // store initial position as respawn location
         respawnPosition = transform.position;
 		respawnRotation = transform.rotation;
-        Debug.Log("Starting Position and Rotation " + respawnPosition + " and " + respawnRotation);
+        //Debug.Log("Starting Position and Rotation " + respawnPosition + " and " + respawnRotation);
 
 
     }
@@ -32,29 +32,8 @@ public class Health : MonoBehaviour
     public void Respawn()
     {
         Debug.Log("Respawn Position and Rotation " + respawnPosition + " and " + respawnRotation);
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        transform.position = new Vector3(3f, -1.7f, -2f);//respawnPosition;
-        //transform.rotation = respawnRotation;
+        transform.rotation = respawnRotation;
+        transform.position = respawnPosition;
     }
          
 }

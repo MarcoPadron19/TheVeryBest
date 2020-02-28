@@ -50,10 +50,10 @@ public class PickUps : MonoBehaviour
         // *** Destroy the coin ***
         // Note: Destroy(this); destroys this, the script attached to the coin (not what you want)
         // Destroy(this.gameObject); destroys whatever game object this (the script) is attached to
-        AudioSource.PlayClipAtPoint(pickUpCollected, player.transform.position);
+        //AudioSource.PlayClipAtPoint(pickUpCollected, player.transform.position);
         Destroy(this.gameObject);
 
-        GameManager.gameManagerInstance.IncreaseScore(1);
+        //GameManager.gameManagerInstance.IncreaseScore(1);
 
     }
 }
