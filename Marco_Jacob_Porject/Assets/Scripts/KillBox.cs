@@ -8,7 +8,7 @@ public class KillBox : MonoBehaviour {
 
     void OnTriggerEnter(Collider colliderInfo)
     {
-        // This just let's you know (in the console) that there was a collision.
+        //This just let's you know (in the console) that there was a collision.
         // You can't start debugging code in this OnTriggerEnter method (or function) until you know it's at least being called
         //Debug.Log("Detected collision between " + gameObject.name + " and " + colliderInfo.name);
         //if (colliderInfo.gameObject == player)

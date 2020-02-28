@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public enum gameStates { Playing, Death, GameOver, BeatLevel };
     public gameStates gameState = gameStates.Playing;
 
-    public int score = 0;
+    public static int score = 0;
 
     public GameObject mainCanvas;
     public Text mainScoreDisplay;
@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     private Health playerHealth;
 
     private Transform playerStart;
+
+    private int reviveStar;
 
     void Start()
     {
@@ -121,7 +123,13 @@ public class GameManager : MonoBehaviour
     {
         score += increaseInScore;
         mainScoreDisplay.text = score.ToString();
+    }
 
+    public void StarRevive(int revivingStar)
+    {
+        score = score - revivingStar;
+        mainScoreDisplay.text = score.ToString();
+        reviveStar = StarAbsorb.revive;
     }
 
 }

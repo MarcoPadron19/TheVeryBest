@@ -9,21 +9,13 @@ using UnityEngine;
 
 public class PickUps : MonoBehaviour
 {
-
     public float coinRotationSpeed = 90f;
     public GameObject player;
+    public int maxCarry;
+
+    private static int score;
 
     public AudioClip pickUpCollected;
-
-    // Use this for initialization
-    void Start()
-    {
-        if (player == null)
-        {
-            player = GameObject.FindWithTag("Player");
-        }
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -32,6 +24,8 @@ public class PickUps : MonoBehaviour
         // It compensates for the fact that framerate varies, so it'll only rotate the coin enough
         // to make up for how much time has passed since the last Update function call
         transform.Rotate(Vector3.up, coinRotationSpeed * Time.deltaTime);
+
+        score = GameManager.score;  //  Update our score continuously.
     }
 
     // This is a collision detection script. You use "OnTriggerEnter" when you have checked the box
@@ -45,15 +39,21 @@ public class PickUps : MonoBehaviour
         Debug.Log("Detected collision between " + gameObject.name + " and " + colliderInfo.name);
 
         // *** Increase player score
-        // GameManager.gameManagerInstance.Collect(1);
+        //GameManager.gameManagerInstance.Collect(1);
 
         // *** Destroy the coin ***
         // Note: Destroy(this); destroys this, the script attached to the coin (not what you want)
         // Destroy(this.gameObject); destroys whatever game object this (the script) is attached to
         //AudioSource.PlayClipAtPoint(pickUpCollected, player.transform.position);
-        Destroy(this.gameObject);
+        if (score <= maxCarry)
+        {
+            Destroy(this.gameObject);
 
-        //GameManager.gameManagerInstance.IncreaseScore(1);
-
+            GameManager.gameManagerInstance.IncreaseScore(1);
+        }
+        else
+        {
+            !Destroy(this.gameObject);
+        }
     }
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Fire
   - Enemy
+  - PickUp1
+  - Game Manager
   layers:
   - Default
   - TransparentFX
