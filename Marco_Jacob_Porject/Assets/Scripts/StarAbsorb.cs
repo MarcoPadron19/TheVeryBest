@@ -18,14 +18,13 @@ public class StarAbsorb : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Score:" + revive);
         score = GameManager.score;
 
         revive += score;
 
         GameManager.gameManagerInstance.StarRevive(score);
 
-        if (revive == starsToRevive)
+        if (revive >= starsToRevive)
         {
             Destroy(this.gameObject);
         }

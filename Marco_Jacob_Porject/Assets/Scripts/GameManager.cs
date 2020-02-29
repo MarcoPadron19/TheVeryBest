@@ -17,9 +17,11 @@ public class GameManager : MonoBehaviour
     public gameStates gameState = gameStates.Playing;
 
     public static int score = 0;
+    public static int starHelium = 0;
 
     public GameObject mainCanvas;
-    public Text mainScoreDisplay;
+    public Text heliumPickedUp;
+    public Text starHasThisMuch;
     public GameObject gameOverCanvas;
     public Text gameOverScoreDisplay;
 
@@ -30,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     private Transform playerStart;
 
-    private int reviveStar;
+    private static int reviveStar;
 
     void Start()
     {
@@ -54,7 +56,9 @@ public class GameManager : MonoBehaviour
         }
 
         // setup score display
-        mainScoreDisplay.text = score.ToString();
+        heliumPickedUp.text = score.ToString();
+        starHasThisMuch.text = starHelium.ToString();
+
 
         // make other UI inactive
 //        gameOverCanvas.SetActive(false);
@@ -122,14 +126,15 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore(int increaseInScore)
     {
         score += increaseInScore;
-        mainScoreDisplay.text = score.ToString();
+        heliumPickedUp.text = score.ToString();
     }
 
     public void StarRevive(int revivingStar)
     {
         score = score - revivingStar;
-        mainScoreDisplay.text = score.ToString();
+        heliumPickedUp.text = score.ToString();
         reviveStar = StarAbsorb.revive;
+        starHasThisMuch.text = reviveStar.ToString();
     }
 
 }

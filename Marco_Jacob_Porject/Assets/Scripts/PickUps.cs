@@ -45,7 +45,7 @@ public class PickUps : MonoBehaviour
         // Note: Destroy(this); destroys this, the script attached to the coin (not what you want)
         // Destroy(this.gameObject); destroys whatever game object this (the script) is attached to
         //AudioSource.PlayClipAtPoint(pickUpCollected, player.transform.position);
-        if (score <= maxCarry)
+        if (score < maxCarry)
         {
             Destroy(this.gameObject);
 
@@ -53,7 +53,7 @@ public class PickUps : MonoBehaviour
         }
         else
         {
-            !Destroy(this.gameObject);
+            GameManager.gameManagerInstance.IncreaseScore(0);
         }
     }
 }

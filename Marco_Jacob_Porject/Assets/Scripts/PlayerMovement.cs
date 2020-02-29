@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    private static int score;
+
     Vector3 velocity;
     bool isGrounded;
 
@@ -43,6 +45,36 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        score = GameManager.score;  //  Update our score continuously.
+    }
+
+    void slowDown(int score)
+    {
+        if (score == 1)
+        {
+            speed -= 1;
+        }
+
+        if (score == 2)
+        {
+            speed -= 1;
+        }
+
+        if (score == 3)
+        {
+            speed -= 1;
+        }
+
+        if (score == 4)
+        {
+            speed -= 1;
+        }
+
+        if (score == 5)
+        {
+            speed -= 1;
+        }
     }
 
     /*public void OnTriggerEnter(Collider other)
