@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public gameStates gameState = gameStates.Playing;
 
     public static int score = 0;
-    public static int starHelium = 0;
+    public static int reviveStar;
 
     public GameObject mainCanvas;
     public Text heliumPickedUp;
@@ -31,11 +31,11 @@ public class GameManager : MonoBehaviour
     private Health playerHealth;
 
     private Transform playerStart;
-
-    private static int reviveStar;
+    
 
     void Start()
     {
+        //reviveStar = StarAbsorb.starsNeededToRevive;
         // If there is no instance of the game manager, this is that instance
         // if there already is one, and it isn't this, kill it. (this is 
         // standard boilerplate game manager stuff. You should always have a
@@ -57,17 +57,15 @@ public class GameManager : MonoBehaviour
 
         // setup score display
         heliumPickedUp.text = score.ToString();
-        starHasThisMuch.text = starHelium.ToString();
+        starHasThisMuch.text = reviveStar.ToString();
 
 
         // make other UI inactive
-//        gameOverCanvas.SetActive(false);
-  
+        //        gameOverCanvas.SetActive(false);
     }
 
     void Update()
     {
-      
         /*     switch (gameState)
              {
                  case gameStates.Playing:
@@ -131,10 +129,10 @@ public class GameManager : MonoBehaviour
 
     public void StarRevive(int revivingStar)
     {
+        reviveStar += score;
+        starHasThisMuch.text = reviveStar.ToString();
         score = score - revivingStar;
         heliumPickedUp.text = score.ToString();
-        reviveStar = StarAbsorb.revive;
-        starHasThisMuch.text = reviveStar.ToString();
     }
 
 }

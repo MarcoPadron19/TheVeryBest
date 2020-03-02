@@ -7,10 +7,16 @@ public class StarAbsorb : MonoBehaviour
     public GameObject player;
     public int starsToRevive;
 
+    public static int starsNeededToRevive;
+
     public static int revive;
 
     private static int score;
 
+    void Start()
+    {
+        starsNeededToRevive = starsToRevive;
+    }
     void Update()
     {
         score = GameManager.score;  //  Update our score continuously.
@@ -18,8 +24,6 @@ public class StarAbsorb : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        score = GameManager.score;
-
         revive += score;
 
         GameManager.gameManagerInstance.StarRevive(score);
