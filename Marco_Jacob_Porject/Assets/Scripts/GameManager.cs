@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverCanvas;
     public Text gameOverScoreDisplay;
 
+    public GameObject canvas;
+
     public AudioSource backgroundMusic;
     public AudioClip gameOverSFX;
 
@@ -66,6 +68,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+
+        mainCanvas = GameObject.FindGameObjectWithTag("canvas-for_game");
         /*     switch (gameState)
              {
                  case gameStates.Playing:

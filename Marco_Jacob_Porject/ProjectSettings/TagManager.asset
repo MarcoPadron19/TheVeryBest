@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - PickUp1
   - Game Manager
+  - H_PickedUp
+  - S_PickedUp
+  - canvas-for_game
   layers:
   - Default
   - TransparentFX
