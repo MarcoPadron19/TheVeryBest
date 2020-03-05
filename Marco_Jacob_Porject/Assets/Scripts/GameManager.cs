@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -57,9 +58,8 @@ public class GameManager : MonoBehaviour
             player = GameObject.FindWithTag("Player");
         }
 
-        // setup score display
-        heliumPickedUp.text = score.ToString();
-        starHasThisMuch.text = reviveStar.ToString();
+
+        mainCanvas = GameObject.FindGameObjectWithTag("Main_Menu_canvas");
 
 
         // make other UI inactive
@@ -69,7 +69,20 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        mainCanvas = GameObject.FindGameObjectWithTag("canvas-for_game");
+        if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Game"))
+        {
+            mainCanvas = GameObject.FindGameObjectWithTag("canvas-for_game");
+            heliumPickedUp = GameObject.FindGameObjectWithTag("H_PickedUp").GetComponent<Text>();
+            starHasThisMuch = GameObject.FindGameObjectWithTag("S_PickedUp").GetComponent<Text>();
+            // setup score display
+            heliumPickedUp.text = score.ToString();
+            starHasThisMuch.text = reviveStar.ToString();
+        }
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
+        {
+            mainCanvas = GameObject.FindGameObjectWithTag("Main_Menu_canvas");
+        }
         /*     switch (gameState)
              {
                  case gameStates.Playing:
@@ -138,6 +151,5 @@ public class GameManager : MonoBehaviour
         score = score - revivingStar;
         heliumPickedUp.text = score.ToString();
     }
-
 }
 

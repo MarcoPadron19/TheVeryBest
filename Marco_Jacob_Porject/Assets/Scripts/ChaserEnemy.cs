@@ -35,7 +35,7 @@ public class ChaserEnemy : MonoBehaviour
         float distance = Vector3.Distance(transform.position, target.position);
 
         //so long as the chaser is farther away than the minimum distance, move towards it at rate speed.
-        if (distance > minDist)
+        if (distance < minDist)
             transform.position += transform.forward * chaseSpeed * Time.deltaTime;
     }
 

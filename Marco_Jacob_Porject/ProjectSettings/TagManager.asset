@@ -11,6 +11,7 @@ TagManager:
   - H_PickedUp
   - S_PickedUp
   - canvas-for_game
+  - Main_Menu_canvas
   layers:
   - Default
   - TransparentFX
