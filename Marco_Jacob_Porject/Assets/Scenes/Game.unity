@@ -7233,7 +7233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 240
+  startingTime: 360
   countDown: {fileID: 1178464564}
 --- !u!222 &324789945507807504
 CanvasRenderer:
