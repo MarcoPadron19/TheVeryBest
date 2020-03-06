@@ -6035,9 +6035,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 262140556}
   numMax: 3
-  xmin: 5
+  xmin: 0
   xmax: 5
-  ymin: 5
+  ymin: 0
   ymax: 5
 --- !u!64 &1740160519
 MeshCollider:
