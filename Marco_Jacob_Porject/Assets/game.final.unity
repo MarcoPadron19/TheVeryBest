@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.5050951, g: 0.62741005, b: 1.6945106, a: 1}
+  m_IndirectSpecularColor: {r: 0.8119298, g: 0.88071644, b: 1.1010506, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -304,10 +304,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 262140556}
   numMax: 1
-  xmin: 3
-  xmax: 3
-  ymin: 3
-  ymax: 3
+  xmin: 2
+  xmax: 5
+  ymin: 2
+  ymax: 5
 --- !u!64 &81328617
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1293,7 +1293,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389362607}
-  m_LocalRotation: {x: -0, y: 0.73497975, z: -0, w: 0.6780892}
+  m_LocalRotation: {x: -0, y: 0.9505361, z: -0, w: -0.3106142}
   m_LocalPosition: {x: -187.8, y: -3.02, z: 1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1302,7 +1302,7 @@ Transform:
   - {fileID: 1106089228}
   m_Father: {fileID: 0}
   m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 94.61101, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 216.19199, z: 0}
 --- !u!1 &424175265 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: d345c16293c0b3944af20878cdc7652b,
@@ -6035,10 +6035,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 262140556}
   numMax: 3
-  xmin: 0
-  xmax: 5
-  ymin: 0
-  ymax: 5
+  xmin: 2
+  xmax: 4
+  ymin: 2
+  ymax: 4
 --- !u!64 &1740160519
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7233,7 +7233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 240
+  startingTime: 300
   countDown: {fileID: 1178464564}
 --- !u!222 &324789945507807504
 CanvasRenderer:

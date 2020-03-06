@@ -460,11 +460,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You have finally fixed your ship, to get off the planet you have been
+  m_text: 'You have finally fixed your ship, to get off the planet you have been
     staying for three years. The only thing left is to collect ten stardusts which
     are spread out all over the planet. With this you will be able to power up your
-    ship and leave back to Earth. \n\nYou are only able to carry five stardust at
-    a time.\n\nMovement: WASD & Arrow Keys\nJump: \"Space bar\""
+    ship and leave back to Earth.  You must place the stardust in fuel tank that
+    is sticking out of the ship.
+
+
+    You are only able to carry five stardust at
+    a time.
+
+
+    Movement: WASD & Arrow Keys
+
+    Jump: "Space bar"'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
