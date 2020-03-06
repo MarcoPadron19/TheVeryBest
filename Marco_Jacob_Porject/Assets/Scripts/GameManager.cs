@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     private Transform playerStart;
     
+    
 
     void Start()
     {
@@ -60,16 +61,14 @@ public class GameManager : MonoBehaviour
 
 
         mainCanvas = GameObject.FindGameObjectWithTag("Main_Menu_canvas");
-
-
+        
         // make other UI inactive
         //        gameOverCanvas.SetActive(false);
     }
 
     void Update()
     {
-
-        if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Game"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Game"))
         {
             mainCanvas = GameObject.FindGameObjectWithTag("canvas-for_game");
             heliumPickedUp = GameObject.FindGameObjectWithTag("H_PickedUp").GetComponent<Text>();

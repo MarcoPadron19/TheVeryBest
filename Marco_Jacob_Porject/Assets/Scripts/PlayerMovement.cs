@@ -47,32 +47,4 @@ public class PlayerMovement : MonoBehaviour
 
         score = GameManager.score;  //  Update our score continuously.
     }
-
-    void slowDown(int score)
-    {
-        if (score == 1)
-        {
-            speed -= 1;
-        }
-
-        if (score == 2)
-        {
-            speed -= 1;
-        }
-
-        if (score == 3)
-        {
-            speed -= 1;
-        }
-
-        if (score == 4)
-        {
-            speed -= 1;
-        }
-
-        if (score == 5)
-        {
-            speed -= 1;
-        }
-    }
 }
