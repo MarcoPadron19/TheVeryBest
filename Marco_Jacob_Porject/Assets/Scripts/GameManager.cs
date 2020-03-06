@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour
     private Health playerHealth;
 
     private Transform playerStart;
-    
-    
+
+
 
     void Start()
     {
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
 
 
         mainCanvas = GameObject.FindGameObjectWithTag("Main_Menu_canvas");
-        
+
         // make other UI inactive
         //        gameOverCanvas.SetActive(false);
     }
@@ -81,6 +81,40 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
         {
             mainCanvas = GameObject.FindGameObjectWithTag("Main_Menu_canvas");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            score = 0;
+            if(reviveStar >= 10)
+            {
+                reviveStar = 0;
+                starHasThisMuch.text = reviveStar.ToString();
+            }
+        }
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Death"))
+        {
+            mainCanvas = GameObject.FindGameObjectWithTag("Death_Canvas");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            score = 0;
+            if (reviveStar >= 10)
+            {
+                reviveStar = 0;
+                starHasThisMuch.text = reviveStar.ToString();
+            }
+        }
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Win"))
+        {
+            mainCanvas = GameObject.FindGameObjectWithTag("Win_canvas");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            score = 0;
+            if (reviveStar >= 10)
+            {
+                reviveStar = 0;
+                starHasThisMuch.text = reviveStar.ToString();
+            }
         }
         /*     switch (gameState)
              {
@@ -145,10 +179,14 @@ public class GameManager : MonoBehaviour
 
     public void StarRevive(int revivingStar)
     {
+        if(reviveStar >= 10)
+        {
+            reviveStar = 0;
+            starHasThisMuch.text = reviveStar.ToString();
+        }
         reviveStar += score;
         starHasThisMuch.text = reviveStar.ToString();
         score = score - revivingStar;
         heliumPickedUp.text = score.ToString();
     }
 }
-
