@@ -1,7 +1,8 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class StarAbsorb : MonoBehaviour
 {
     public GameObject player;
@@ -31,6 +32,7 @@ public class StarAbsorb : MonoBehaviour
         if (revive >= starsToRevive)
         {
             Destroy(this.gameObject);
+            SceneManager.LoadScene(3);
         }
     }
 }

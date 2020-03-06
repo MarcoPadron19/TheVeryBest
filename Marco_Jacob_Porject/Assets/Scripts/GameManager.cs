@@ -81,6 +81,24 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main Menu"))
         {
             mainCanvas = GameObject.FindGameObjectWithTag("Main_Menu_canvas");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Death"))
+        {
+           mainCanvas = GameObject.FindGameObjectWithTag("Death_Canvas");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            score = 0;
+        }
+
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Win"))
+        {
+            mainCanvas = GameObject.FindGameObjectWithTag("Win_canvas");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            score = 0;
         }
         /*     switch (gameState)
              {
